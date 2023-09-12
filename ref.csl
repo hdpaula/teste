@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-US">
+  <info>
+    <title>Journal of Computational Chemistry</title>
+    <title-short>JCC</title-short>
+    <id>http://www.zotero.org/styles/journal-of-computational-chemistry</id>
+    <link href="http://www.zotero.org/styles/journal-of-computational-chemistry" rel="self"/>
+    <link href="http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1096-987X/homepage/jcc_author_guidelines.html" rel="documentation"/>
+    <author>
+      <name>Wouter Boomsma</name>
+      <email>wb@bio.ku.dk</email>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="chemistry"/>
+    <issn>0192-8651</issn>
+    <eissn>1096-987X</eissn>
+    <updated>2013-05-17T18:57:42+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <macro name="edition">
+    <!-- ... (conteúdo da macro edition) ... -->
+  </macro>
+  <macro name="issued">
+    <!-- ... (conteúdo da macro issued) ... -->
+  </macro>
+  <macro name="author">
+    <names variable="author">
+      <name initialize-with=". "/>
+      <label form="short" prefix=", " text-case="capitalize-first"/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+      </substitute>
+    </names>
+  </macro>
+  <macro name="editor">
+    <names variable="editor">
+      <name initialize-with=". " delimiter=", " and="text"/>
+      <label form="short" text-case="capitalize-first" prefix=", "/>
+    </names>
+  </macro>
+  <macro name="locators">
+    <!-- ... (conteúdo da macro locators) ... -->
+  </macro>
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+  <macro name="publisher">
+    <!-- ... (conteúdo da macro publisher) ... -->
+  </macro>
+  <macro name="event">
+    <!-- ... (conteúdo da macro event) ... -->
+  </macro>
+  <macro name="page">
+    <!-- ... (conteúdo da macro page) ... -->
+  </macro>
+  <macro name="doi">
+    <!-- DOI removido -->
+  </macro>
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout delimiter=", ">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+    </layout>
+  </citation>
+  <bibliography entry-spacing="0" second-field-align="flush">
+    <layout suffix=".">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text macro="author" suffix=", "/>
+      <choose>
+        <if type="book">
+          <!-- ... (conteúdo para o tipo book) ... -->
+        </if>
+        <else-if type="article-journal">
+          <group delimiter=", ">
+            <text variable="container-title" form="short" font-style="italic"/>
+            <text macro="issued" font-weight="bold"/>
+            <text macro="locators"/>
+            <text macro="page"/>
+          </group>
+        </else-if>
+        <else-if type="paper-conference">
+          <!-- ... (conteúdo para o tipo paper-conference) ... -->
+        </else-if>
+        <else-if type="thesis">
+          <!-- ... (conteúdo para o tipo thesis) ... -->
+        </else-if>
+        <else-if type="patent">
+          <!-- ... (conteúdo para o tipo patent) ... -->
+        </else-if>
+        <else-if type="webpage">
+          <!-- ... (conteúdo para o tipo webpage) ... -->
+        </else-if>
+        <else>
+          <!-- ... (conteúdo para outros tipos) ... -->
+        </else>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
+
